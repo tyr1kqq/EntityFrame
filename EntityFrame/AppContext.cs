@@ -18,7 +18,7 @@ namespace EntityFrame
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-1GNPUGQ;Database=EF;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS;Database=TestDb;Trusted_Connection=True;TrustServerCertificate=True;");
         }
     }
 }
