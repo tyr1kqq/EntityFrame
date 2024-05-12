@@ -11,14 +11,13 @@ namespace EntityFrame
     {
         // Объекты такблицы users
         public DbSet<User> Users { get; set; }
-        public AppContext() 
-        {
-            Database.EnsureCreated();
-        }
+        public DbSet<Company> Companies    { get; set; }
+        public DateTime CreateDate { get; set; }
+        
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS;Database=TestDb;Trusted_Connection=True;TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS;Database=EF;Trusted_Connection=True;TrustServerCertificate=True;");
         }
     }
 }
